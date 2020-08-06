@@ -5,8 +5,8 @@
   --themeDotBorder: #24293e;
   --mainText: black;
   --secondaryText: #4b5156;
-
-
+  --previewBg: rgba(251, 249, 243, 0.8);
+  --previewShadow: #f0ead6;
 }
 
 html,
@@ -105,7 +105,7 @@ h6 {
   box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 3em 30em;
+  /* grid-template-rows: 3em 30em; */
   grid-template-areas:
     'nav-wrapper nav-wrapper'
     'left-column right-column'
@@ -166,7 +166,6 @@ h6 {
   grid-area: left-column;
   padding-top: 50px;
   padding-bottom: 50px;
-  /* border: 1px dashed lightcoral; */
 }
 
 #profile_pic {
@@ -229,9 +228,76 @@ h6 {
 }
 
 
+/* RIGHT COLUMN  */
 .right-column {
   grid-area: right-column;
-  /* border: 1px dashed lightcoral; */
+  display: grid;
+  align-content: center;
+
+  padding-top: 22px;
+  padding-bottom: 70px;
+}
+
+#preview-shadow {
+  background-color: var(--previewShadow);
+  width: 300px;
+  height: 180px;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+#preview {
+  width: 300px;
+  border: 1.5px solid #17a2b8;
+  background-color: var(--previewBg);
+  padding: 15px;
+  position: relative;
+}
+
+/* <<<CORNERS INTRO>>>  */
+.corner {
+  width: 7px;
+  height: 7px;
+  border-radius: 50px;
+  border: 1.5px solid #17a2b8;
+  background-color: #fff;
+  position: absolute;
+}
+
+#corner-tl {
+  top: -5px;
+  left: -5px;
+}
+
+#corner-tr {
+  top: -5px;
+  right: -5px;
+}
+
+#corner-br {
+  bottom: -5px;
+  right: -5px;
+}
+
+#corner-bl {
+  bottom: -5px;
+  left: -5px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .intro-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'nav-wrapper'
+      'left-column'
+      'right-column'
+    ;
+  }
+
+  .right-column {
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 1200px) {
