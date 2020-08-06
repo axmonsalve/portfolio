@@ -310,12 +310,49 @@ h6 {
   width: 100%;
 }
 
+.post-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.post {
+  border: 1px solid var(--borderColor);
+  -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  background-color: #fff;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 180px;
+  display: block;
+  object-fit: cover;
+}
+
+.post-preview {
+  background-color: #fff;
+  padding: 15px;
+}
+
+.post-title {
+  color: black;
+  margin: 0;
+}
+
+.post-intro {
+  color: #4b5156;
+  font-size: 14px;
+}
+
 @media screen and (max-width: 768px) {
 
   .intro-wrapper {
     grid-template-columns: 1fr;
-    grid-template-areas:
-      'nav-wrapper'
+    grid-template-areas: 'nav-wrapper'
       'left-column'
       'right-column'
     ;
