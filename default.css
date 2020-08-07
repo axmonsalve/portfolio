@@ -16,9 +16,14 @@ body {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body * {
   transition: .3s;
 }
+
 
 h1,
 h2,
@@ -136,6 +141,7 @@ h6 {
 
 #navigation a {
   color: var(--mainText);
+  margin-left: 24px;
 }
 
 #navigation li {
@@ -396,6 +402,7 @@ h6 {
   border: 1px solid var(--borderColor);
   font-size: 14px;
 }
+
 
 
 

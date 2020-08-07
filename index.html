@@ -28,8 +28,8 @@
               <div id="dot-3" class="browser-dot"></div>
             </div>
             <ul id="navigation">
-              <li><a href="#">Contact</a></li>
-              <li><a href="post.html">Portfolio</a></li>
+              <li><a href="#contact-form">Contact</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
               <!-- <li><a href="#">Contact</a></li> -->
             </ul>
           </div>
@@ -73,13 +73,15 @@
           <div class="about-me">
             <h4>Más acerca mío</h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-              ipsum veniam.
+              Soy desarrollador web junior y mis objetivos son claros;
+              colaboración y disciplina. Además de estar actualizado con las
+              tecnologías Front end para desplegar lo mejor de mí en éste rubro.
             </p>
 
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatibus rem commodi obcaecati voluptatem! Culpa, aspernatur!
+              Con la ambición y el objetivo de crecer en el desarrollo de mi
+              carrera profesional, he dedicado buen tiempo al estudio y
+              comprensión del área, y seguiré por más.navigation
             </p>
 
             <hr />
@@ -88,7 +90,9 @@
 
             <p>
               Desarrollo Front end principalmente enfocado en Javascript:
-              <a href="#">descargar curriculum</a>
+              <a target="_blank" href="Axel_Monsalve_CV.pdf"
+                >descargar curriculum</a
+              >
             </p>
 
             <div id="skills">
@@ -96,14 +100,14 @@
                 <li>Javascript</li>
                 <li>HTML</li>
                 <li>CSS</li>
-                <li>ReactJS</li>
+                <li>Sass</li>
               </ul>
 
               <ul>
+                <li>Pug</li>
+                <li>ReactJS</li>
                 <li>NextJS</li>
                 <li>GatsbyJS</li>
-                <li>SASS</li>
-                <li>Pug</li>
               </ul>
             </div>
           </div>
@@ -119,7 +123,7 @@
       </div>
     </section>
 
-    <section class="s1">
+    <section class="s1" id="portfolio">
       <div class="main-container">
         <h3 style="text-align: center;">Algunos proyectos recientes</h3>
 
@@ -404,19 +408,29 @@
       <div class="main-container">
         <h3 style="text-align: center;">Contacto</h3>
 
-        <form id="contact-form">
+        <form
+          id="contact-form"
+          action="https://formsubmit.co/axel.monsalve.ponce@gmail.com"
+          method="POST"
+        >
           <label>Name</label>
-          <input type="text" name="name" class="input-field" />
+          <input type="text" name="name" class="input-field" required />
 
           <label>Asunto</label>
           <input type="text" name="subject" class="input-field" />
 
           <label>Email</label>
-          <input type="text" name="email" class="input-field" />
+          <input type="email" name="email" class="input-field" required />
 
           <label>Mensaje</label>
           <textarea name="message" class="input-field"></textarea>
           <input type="submit" value="Send" id="submit-btn" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input
+            type="hidden"
+            name="_next"
+            value="http://127.0.0.1:5501/index.html"
+          />
         </form>
       </div>
     </section>
