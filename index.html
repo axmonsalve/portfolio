@@ -9,7 +9,7 @@
     />
 
     <link rel="stylesheet" href="default.css" />
-    <link id="theme-style" rel="stylesheet" href="purple.css" />
+    <link id="theme-style" rel="stylesheet" href="" />
     <title>Axel Monsalve || Web Developer</title>
   </head>
   <body>
@@ -39,10 +39,10 @@
               Personaliza el tema
             </h5>
             <div class="theme-options-wrapper">
-              <div class="theme-dot" id="light-mode"></div>
-              <div class="theme-dot" id="blue-mode"></div>
-              <div class="theme-dot" id="green-mode"></div>
-              <div class="theme-dot" id="purple-mode"></div>
+              <div data-mode="light" class="theme-dot" id="light-mode"></div>
+              <div data-mode="blue" class="theme-dot" id="blue-mode"></div>
+              <div data-mode="green" class="theme-dot" id="green-mode"></div>
+              <div data-mode="purple" class="theme-dot" id="purple-mode"></div>
             </div>
             <p id="settings-note">
               La configuración del tema se guardará para tu próxima visita
@@ -56,8 +56,7 @@
                 <h3>Lo que hago</h3>
                 <p>
                   Soy un desarrollador web entusiasta, Ambicioso de
-                  conocimiento. Explorador innato de la vida. Buscador de mi
-                  verdad.
+                  conocimiento, comprometido con el avance y la mejora continua.
                 </p>
                 <div id="corner-br" class="corner"></div>
                 <div id="corner-bl" class="corner"></div>
@@ -421,5 +420,7 @@
         </form>
       </div>
     </section>
+
+    <script src="script.js"></script>
   </body>
 </html>
